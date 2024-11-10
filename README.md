@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# User Management Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Apresentação da Proposta do Projeto
 
-Currently, two official plugins are available:
+Este projeto é um cliente de gerenciamento de usuários construído com [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) e [Vite](https://vitejs.dev/). A aplicação permite criar, atualizar, deletar e listar usuários, consumindo a API de gerenciamento de usuários.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Bibliotecas Utilizadas 📚
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://shadcn.com/)
+- [Lucide React](https://lucide.dev/)
+- [React Hook Form](https://react-hook-form.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Componentes Utilizados 🧩
 
-- Configure the top-level `parserOptions` property like this:
+- **UserTable**: Componente para exibir a tabela de usuários.
+- **UserForm**: Componente para o formulário de criação de usuários.
+- **UserUpdateForm**: Componente para o formulário de atualização de usuários.
+- **UserDeleteDialog**: Componente para o diálogo de confirmação de exclusão de usuários.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Funcionalidades 🚀
+
+- **Criar Usuário**: Permite criar um novo usuário preenchendo um formulário com nome, e-mail e senha.
+- **Atualizar Usuário**: Permite atualizar os dados de um usuário existente, como nome e senha.
+- **Deletar Usuário**: Permite deletar um usuário existente com uma confirmação de exclusão.
+- **Listar Usuários**: Exibe uma lista de todos os usuários cadastrados.
+- **Buscar Usuário por ID**: Permite buscar um usuário específico pelo ID.
+
+## Estrutura do Projeto 📁
+
+```Markdown
+└── 📁src
+  ├── 📁components
+  │   ├── UserTable.tsx
+  │   ├── UserForm.tsx
+  │   ├── UserUpdateForm.tsx
+  │   └── UserDeleteDialog.tsx
+  ├── 📁services
+  │   ├── userService.ts
+  │   └── userHandlers.ts
+  ├── 📁types
+  │   └── user.d.ts
+  └── App.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Como Rodar o Projeto 🚀
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Pré-requisitos: Node.js e npm
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Instalar as dependências:
+
+```bash
+npm install
 ```
+
+Rodar o projeto:
+
+```bash
+npm run dev
+```
+
+## Referências 📚
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://shadcn.com/)
+- [Lucide React](https://lucide.dev/)
+- [React Hook Form](https://react-hook-form.com/)
